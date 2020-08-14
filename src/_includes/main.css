@@ -1,0 +1,72 @@
+/**********************
+ * Variables 
+ *********************/
+
+:root {
+  --max-page-width: 576px;
+  --margin-l: 20px;
+  --margin-m: 16px;
+  --margin-xs: 5px;
+  --padding-m: 16px;
+  --padding-s: 10px;
+  --padding-xs: 5px;
+  --border-radius: 15px;
+}
+
+/**********************
+ * Common / Layout
+ *********************/
+
+body {
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'BenchNine', sans-serif;
+}
+
+a {
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p a {
+  text-decoration: underline;
+  color: #ee7b20;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+img {
+  border-radius: 50%;
+  width: 150px;
+  height: 100%;
+}
+
+main {
+  padding: 0 30px;
+  margin-top: 80px;
+}

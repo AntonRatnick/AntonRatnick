@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      About – Anton Ratnikov
+    </title>
+
+    <meta name="author" content="Anton Ratnikov" />
+    <meta name="description" content="Anton Ratnikov about page" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BenchNine:wght@700&family=Inconsolata:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    {% set css %}
+      {% include "./main.css" %}
+    {% endset %}
+
+    <style>
+      {{ css | postCSS | safe }}
+    </style>
+
+  </head>
+  <body>
+
+  <div class="container">
+    {{ content | safe }}
+  </div>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+---
+permalink: "/skills/"
+---
+
+{% set css %}
+  {% include "./skills.css" %}
+{% endset %}
+
+<style>
+  {{ css | postCSS | safe }}
+</style>
+
+<header>
+  <img src="/img/skill-wheel.webp"/>
+  {% include 'nav.njk' %}
+</header>
+
+<main>
+  <h1>Skills</h1>
+  
+  <div class="skills">
+    {% for skill in skills %}
+      <div class="skill">
+        <h3>{{skill.name}}</h3>
+        <div class="caption">Last used {{skill.lastUsed | date}} ago</div>
+        <div class="caption">Used on {{skill.projectsCount}} projects</div>
+        <div class="caption">Used during {{skill.totalUsed}}</div>
+      </div>
+    {% endfor %}
+  </div>
+</main>

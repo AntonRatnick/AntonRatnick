@@ -1,0 +1,20 @@
+.skills {
+  display: grid;
+  grid-gap: var(--margin-m);
+
+  @media screen and (min-width: 576px) {
+    grid-template-columns: 50% 50%;
+  }
+
+  .skill {
+    padding: 0 var(--padding-m) var(--padding-m) var(--padding-m);
+    border: 1px dashed black;
+    word-wrap: break-word;
+    border-radius: var(--border-radius);
+
+    .caption {
+      font-size: 0.7em;
+      color: #1e2021;
+    }
+  }
+}

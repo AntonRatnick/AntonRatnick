@@ -1,0 +1,29 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 0;
+
+  @media screen and (min-width: 576px) {
+    flex-direction: row;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: var(--margin-m);
+    margin-top: var(--margin-m);
+  }
+}
+
+.social {
+  margin-top: var(--margin-l);
+  display: flex;
+
+  @media screen and (min-width: 576px) {
+    justify-content: flex-end;
+  }
+
+  svg {
+    margin-left: var(--margin-m);
+  }
+}

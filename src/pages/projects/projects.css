@@ -1,0 +1,49 @@
+.projects {
+  display: grid;
+  grid-gap: var(--margin-m);
+
+  .project {
+    padding: 0 var(--padding-m) var(--padding-m) var(--padding-m);
+    border: 1px dashed black;
+    word-wrap: break-word;
+    border-radius: var(--border-radius);
+
+    .header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      h3 {
+        margin-bottom: 0;
+      }
+
+      .role {
+        font-size: 0.7em;
+        color: #1e2021;
+      }
+    }
+
+    .caption {
+      font-size: 0.7em;
+      color: #1e2021;
+      @media screen and (min-width: 576px) {
+        margin-left: var(--margin-m);
+      }
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+
+      .pill {
+        font-size: 0.8em;
+        border: 1px solid black;
+        margin-right: var(--margin-xs);
+        margin-bottom: var(--margin-xs);
+        padding: var(--padding-xs) var(--padding-s);
+        border-radius: var(--border-radius);
+      }
+    }
+  }
+}

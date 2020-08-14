@@ -1,0 +1,57 @@
+---
+permalink: "/projects/"
+---
+
+{% set css %}
+  {% include "./projects.css" %}
+{% endset %}
+
+<style>
+  {{ css | postCSS | safe }}
+</style>
+
+<header>
+  <picture>
+   <source srcset="/img/code.webp">
+   <img src="/img/code.jpg" alt="Editor">
+  </picture>
+  {% include 'nav.njk' %}
+</header>
+
+<main>
+  <h1>Projects</h1>
+
+  <div class="projects">
+    {% for project in projects %}
+      <div class="project" tabindex=1>
+        <div class="header">
+        <div>
+          <h3>{{project.name}}</h3>
+          <span class="role">{{project.role}}</span>
+        </div>
+          <span class="caption">{{project.startDate | date}} ago</span>
+        </div>
+        
+        
+        <p>
+          <span><b>Description:</b></span>
+          <br/>
+          {{project.description}}
+        </p>
+        
+        <p>
+          <span><b>Self review:</b></span>
+          <br/>
+          {{project.selfReview}}
+        </p>
+        <div class="pills">
+        {% for technologie in project.technologies %}
+          <span class="pill">
+            {{technologie}}
+          </span>
+        {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</main>
