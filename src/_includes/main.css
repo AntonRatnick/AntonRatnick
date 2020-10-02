@@ -29,6 +29,7 @@ h2,
 h3,
 h4,
 h5 {
+  line-height: 2.5rem;
   font-family: 'BenchNine', sans-serif;
 }
 
@@ -63,7 +64,6 @@ header {
 img {
   border-radius: 50%;
   width: 150px;
-  height: 100%;
 }
 
 main {
